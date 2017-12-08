@@ -1,0 +1,205 @@
+<!--
+ NOTES:
+        The name attribute specifies the name of an <input> element.
+		This attribute is used to reference elements in a JavaScript
+		and/or to reference form data after a form is submitted.
+
+		Important:
+         Only form elements with a name attribute will have their values passed when submitting a form.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Forms</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<header>
+		<h1>HTML Forms</h1>
+	</header>
+
+	<main>
+		<h2>Enter Data</h2>
+
+		<h3>Basic Form Container:</h3>
+		<form> 
+		    <fieldset>
+		    <legend>Cheese</legend>
+		    <div>
+		        <label for="cheese1">Choose your cheese</label>
+		        <input id="cheese1" type="text" list="cheeseTypes">
+                <datalist id="cheeseTypes">
+                    <option value="Blue"></option>
+                    <option value="White"></option>
+                    <option value="Yellow"></option>
+                </datalist>
+		    </div>
+		    </fieldset>
+		</form>
+
+		<h3>Input text and password:</h3>
+		<form action="login.php" method="post">
+		    <fieldset>
+		        <legend>Login</legend>
+		        <div>
+		            <label for="name">UserName</label>
+		            <input id="name" placeholder="Enter your name" type="text" name="name" required autofocus>
+		        </div>
+		        <div>
+		            <label for="pw">Password</label>
+		            <input id="pw" type="password" required>
+		        </div>
+		        <div>
+		            <input id="login" placeholder="Enter your Password" type="submit" value="login">
+		        </div>
+		    </fieldset>
+		</form>
+
+		<h3>Four different Buttons:</h3>
+		<form action="validate-credit-card.php" method="post">
+		    <fieldset>
+		        <legend>Four Buttons Created Using Input</legend>
+		        <div>
+		            <label for="button1">Button</label>
+		            <input id="button1" type="button" value="Can't touch this"/>
+		        </div>
+		        <div>
+		            <label for="submit1">Submit Button</label>
+		            <input id="submit1" type="submit" value="Can't submit this"/>
+		        </div>
+		        <div>
+		            <label for="reset1">Reset Button</label>
+		            <input id="reset1" type="reset" value="Can't reset this"/>
+		        </div>
+		        <div>
+		            <label for="image1">Image Button</label>
+		            <input id="image1" type="image" src="img/dawg-the-hall-monitor.png"/>
+		        </div>
+		    </fieldset>
+		</form>
+
+		<h3>Radio button or Checkbox:</h3>
+		
+		<form action="" method="post">
+		    <fieldset>
+		        <legend>Input can also be used as a radio button and/or a checkbox:</legend>
+		        <div>
+		            <label for="checkbox1">Check it out</label>
+		            <input id="Checkbox1" type="checkbox" checked/>
+		        </div>
+		        <div>
+		            <label for="radio1">Rad(io)</label>
+		            <input id="radio1" type="radio"/>
+		        </div>
+		    </fieldset>
+		</form>
+
+		<h3>Group checkboxes:</h3>
+		
+		<form action="temperature.php" method="post">
+		    <fieldset>
+		        <legend>Select Choose Pick Whatever</legend>
+		        <div>
+		            <label for="celsius">Celsius</label>
+		            <input id="celsius" type="radio" name="temptype" checked/>
+		        </div>
+		        <div>
+		            <label for="fahrenheit">Fahrenheit</label>
+		            <input id="fahrenheit" type="radio" name="temptype"/>
+		        </div>
+		        <div>
+		            <label for="kelvin">Kelvin</label>
+		            <input id="kelvin" type="radio" name="temptype"/>
+		        </div>
+		    </fieldset>
+		</form>
+
+		<h3>Drop down list:</h3>
+		
+		<form action="rig-the-election.php" method="post">
+		    <fieldset>
+		        <legend>Vote Now</legend>
+		        <select name="candidate" id="canditade">
+		            <option selected value="">Please Choose</option>
+		            <optgroup label="Poor Choices">
+		                <option value="DT">Donald Trump</option>
+		                <option value="SC">Slice of Cheese</option>
+		            </optgroup>
+		            <optgroup label="Better Choices">
+		                <option value="DD">Donald Duck</option>
+		                <option value="HS">Homer Simpson</option>
+		            </optgroup>
+		        </select>
+		    </fieldset>
+		</form>
+
+		<h3>Textarea:</h3>
+		
+		<form action="trolling.php" method="post">
+		    <fieldset>
+		        <legend>Tell us why</legend>
+		        <div>
+		            <label for="comments">Please write a novel here:</label>
+                    <textarea placeholder="Please enter your entire book here." rows="20" cols="25" name="comments"id="comments">
+                    </textarea>
+		        </div>
+		    </fieldset>
+		</form>
+
+		<h3>Other Form Elements:</h3>
+		
+		<form action="stop-winter.php" method="post">
+		    <fieldset>
+		        <legend>Cool Input</legend>
+		        <div>
+		            <label for="url1">Enter URL</label>
+		            <input id="url1" type="url" />
+		        </div>
+		        <div>
+		            <label for="email">Enter Email</label>
+		            <input id="email" type="email" />
+		        </div>
+		        <input id="go" type="submit" value="go there now" />
+		        <div>
+		            <label for="color1">Pick a color</label>
+		            <input id="color1" type="color" />
+		        </div>
+		        <div>
+		            <label for="file">Pick a file</label>
+		            <input id="file" type="file" name="image" accept=".jpg, .png, .pdf" />
+		        </div>
+		        <div>
+		            <label for="search1">Search</label>
+		            <input id="search1" type="search" />
+		        </div>
+		        <div>
+		            <label for="date1">Date</label>
+		            <input id="date1" type="date" />
+		        </div>
+		        <div>
+		            <label for="tell">Cellphone</label>
+		            <input id="tell" type="tel" />
+		        </div>
+		        <div>
+		            <label for="amount">Number</label>
+		            <input id="amount" type="number" name="amount" min="1" max="15"/>
+		        </div>
+		    </fieldset>
+		</form>
+
+	</main>
+
+	<footer>
+		<p>&copy;
+			<time datetime="2017">2017</time> Your Name</p>
+	</footer>
+</body>
+
+</html>
